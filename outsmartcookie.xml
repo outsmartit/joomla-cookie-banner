@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+    <name>plg_system_outsmartcookie</name>
+    <author>Outsmartit.be</author>
+    <creationDate>May 2018</creationDate>
+    <copyright>Copyright (C) 2018 Outsmartit.be. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>info@outsmartit.be</authorEmail>
+    <authorUrl>https://www.outsmartit.be</authorUrl>
+    <version>1.0.0</version>
+    <description>PLG_SYSTEM_OUTSMARTCOOKIE_XML_DESC</description>
+    <files>
+        <filename plugin="outsmartcookie">outsmartcookie.php</filename>
+    </files>
+    <languages>
+        <language tag="en-GB">admin/language/en-GB.plg_system_outsmartcookie.ini</language>
+        <language tag="en-GB">admin/language/en-GB.plg_system_outsmartcookie.sys.ini</language>
+        <language tag="nl-NL">admin/language/nl-NL.plg_system_outsmartcookie.ini</language>
+        <language tag="nl-NL">admin/language/nl-NL.plg_system_outsmartcookie.sys.ini</language>
+        <language tag="fr-FR">admin/language/fr-FR.plg_system_outsmartcookie.ini</language>
+        <language tag="fr-FR">admin/language/fr-FR.plg_system_outsmartcookie.sys.ini</language>
+        <language tag="de-DE">admin/language/de-DE.plg_system_outsmartcookie.ini</language>
+        <language tag="de-DE">admin/language/de-DE.plg_system_outsmartcookie.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field type="color" name="buttontextcolor"
+                       default="#000000"
+                       label="PLG_SYS_OUTSMARTCOOKIE_BUTTONTEXTCOLOR_LABEL"
+                       description="PLG_SYS_OUTSMARTCOOKIE_BUTTONTEXTCOLOR_DESC">
+                </field>
+                <field type="color" name="buttoncolor"
+                       default="#e32929"
+                       label="PLG_SYS_OUTSMARTCOOKIE_BUTTONCOLOR_LABEL"
+                       description="PLG_SYS_OUTSMARTCOOKIE_BUTTONCOLOR_DESC">
+                </field>
+                <field type="color" name="textcolor"
+                       default="#000000"
+                       label="PLG_SYS_OUTSMARTCOOKIE_TEXTCOLOR_LABEL"
+                       description="PLG_SYS_OUTSMARTCOOKIE_TEXTCOLOR_DESC">
+                </field>
+                <field type="color" name="backgroundcolor"
+                       default="#ffffff"
+                       label="PLG_SYS_OUTSMARTCOOKIE_BACKGROUNDCOLOR_LABEL"
+                       description="PLG_SYS_OUTSMARTCOOKIE_BACKGROUNDCOLOR_DESC">
+                </field>
+                <field type="list" name="position"
+                       class="btn-group" default=""
+                       label="PLG_SYS_OUTSMARTCOOKIE_POSITION_LABEL"
+                       description="PLG_SYS_OUTSMARTCOOKIE_POSITION_DESC"
+                >
+                    <option value="top">PLG_SYS_OUTSMARTCOOKIE_POSITION_TOP</option>
+                     <option value="bottom">PLG_SYS_OUTSMARTCOOKIE_POSITION_BOTTOM</option>
+                    <option value="bottom-left">PLG_SYS_OUTSMARTCOOKIE_POSITION_LEFT</option>
+                    <option value="bottom-right">PLG_SYS_OUTSMARTCOOKIE_POSITION_RIGHT</option>
+                </field>
+                <field name="linktype" type="list" class="btn-group" default="id" label="PLG_SYS_OUTSMARTCOOKIE_LINKTYPE_LABEL" description="">
+                    <option value="id">PLG_SYS_OUTSMARTCOOKIE_ARTICLE_ID_LABEL</option>
+                    <option value="rel">PLG_SYS_OUTSMARTCOOKIE_REL_URL_LABEL</option>
+                    <option value="abs">PLG_SYS_OUTSMARTCOOKIE_ABS_URL_LABEL</option>
+                </field>
+                <field name="linkparameter" type="text" default="1" label="PLG_SYS_OUTSMARTCOOKIE_LINK_LABEL" description="PLG_SYS_OUTSMARTCOOKIE_LINK_DESC" size="10" />
+            </fieldset>
+        </fields>
+    </config>
+   
+    <updateservers>
+        <server type="extension" priority="1" name="outsmartit Update Site">https://outsmartit.be/updates/outsmartcookie.xml</server>
+    </updateservers>
+</extension>
